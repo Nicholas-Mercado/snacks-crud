@@ -1,5 +1,5 @@
 # from django.shortcuts import render
-from django.views.generic import ListView, DetailView, CreateView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView
 
 from .models import Snack
 # Create your views here.
@@ -15,4 +15,9 @@ class SnackDetailView(DetailView):
 class SnackCreateView(CreateView):
     template_name = 'snack_create.html'
     model = Snack
-    fields = ["name","description","purchaser"]
+    fields = ["title","description","purchaser"]
+
+class SnackUpdateView(UpdateView):
+    template_name = 'snack_create.html'
+    model = Snack
+    fields = ["title","description","purchaser"]
