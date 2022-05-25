@@ -6,4 +6,5 @@
     <p>Purchaser: {{snack.purchaser}}</p>
     </div>
     <a href="{% url 'snack_update' snack.pk %}">+ Update Snack</a>
+    <a href="{% url 'snack_delete' snack.pk %}">+ Delete Snack</a>
 {% endblock content %}
